@@ -73,7 +73,7 @@ export default class DateHelper {
         let gregorianDateValue = HijriShamiDateValue,
         dateSplitted = gregorianDateValue.split("-"),
         day = DateHelper.covertFromShamsiToGregorian(dateSplitted[0], dateSplitted[1],  dateSplitted[2]);
-        return day.join(',');
+        return day.join(',').replace(/,/g, '-');
     }
 
 }
